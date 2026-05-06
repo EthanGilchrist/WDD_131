@@ -45,4 +45,17 @@ nav a:hover {
 footer {
     text-align: center;
 }
-          
+
+@media screen and (min-width: 500px) and (max-width: 1199px) {
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+@media screen and (min-width: 1200px) {
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
