@@ -1,66 +1,79 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
-    margin: 0px;
+  font-family: Roboto, sans-serif;
 }
-
-#image_container {
-    justify-self: center;
-    display: grid;
-    grid-template-columns: 1fr;
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: lightblue;
 }
-
-#footer {
-    /* color: white;
-    background-color: cornflowerblue; */
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    /* width: 100%; */
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.blue {
-    /* justify-content: center;
-    justify-self: center; */
-    width: 100%;
-    color: white;
-    background-color: cornflowerblue;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 30px;
-}
-
-nav {
-    justify-self: center;
-    padding-bottom: 25px;
-    display: none;
-}
-
-a {
-    margin: 0 40px;
-}
-
 h1 {
     text-align: center;
-    margin-top: 0px;
+}
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 1em;
+  border: 1px solid #ccc;
+}
+nav a {
+    padding: 20px;
+    color: black;
+    display: none;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #616061;
+}
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+footer {
+    text-align: center;
 }
 
-img {
-    object-fit: cover;
-    margin: 40px;
+.hide a {
+    display: inline-block;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1299px) {
-#image_container {
+.menu-btn div {
+    transition: transform 0.5s ease-in-out,
+                opacity   0.5s ease-in-out;
+}
+
+.change .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+
+@media screen and (min-width: 500px) and (max-width: 1199px) {
+main {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-}    
+}
 }
 
-@media screen and (min-width: 1300px) {
-#image_container {
+@media screen and (min-width: 1200px) {
+main {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
-nav {
-    display: flex;
 }
 }
