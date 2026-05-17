@@ -1,11 +1,17 @@
 body {
     margin: 0px;
+    background-color: #ddd;
 }
 
 #image_container {
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr;
+}
+
+#image_container img {
+    border: 5px solid white;
+    box-shadow: 5px 5px 3px #777;
 }
 
 #footer {
@@ -18,6 +24,28 @@ body {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+/* Modal */
+dialog img {
+    width: auto;
+    max-width: 90%;
+    max-height: 80%;
+    display: block;
+    margin: 20vh auto;
+    
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
 }
 
 .blue {
@@ -33,12 +61,55 @@ body {
 nav {
     justify-self: center;
     padding-bottom: 25px;
+}
+
+nav a {
+    margin-top: 15px;
+}
+
+.hidden {
     display: none;
+}
+
+.block-toggle a {
+    display: block;
 }
 
 a {
     margin: 0 40px;
 }
+
+/* imported from w4-responsive-menu */
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.menu-btn div {
+    transition: transform 0.5s ease-in-out,
+                opacity   0.5s ease-in-out;
+}
+
+.change .bar1 {
+  transform: translate(0, 9px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+/* endregion */
 
 h1 {
     text-align: center;
@@ -61,6 +132,15 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
 }
 nav {
+    display: flex;
+}
+nav a {
+    display: flex;
+}
+.menu-btn {
+    display: none;
+}
+.hidden {
     display: flex;
 }
 }
