@@ -1,0 +1,115 @@
+:root {
+    --mobile-image-width: 140px;
+    --desktop-image-width: 280px;
+}
+
+body {
+    display: grid;
+}
+
+h1 {
+    /* display: block; */
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    border-color: gold;
+    color: gold;
+    background-color: gold;
+}
+
+nav {
+    justify-self: right;
+    padding-right: 20px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+nav a {
+    padding-left: 20px;
+    padding-right: 20px;
+    /* color: darkred; */
+    text-decoration: none;
+}
+
+h2, h3, nav a {
+    color:#a24;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+#rearrangy-part {
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 2fr 2px 1fr;
+}
+
+img {
+    width: var(--mobile-image-width);
+    grid-column: 2/3;
+}
+
+.center {
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr var(--mobile-image-width) 1fr; /* I am so mad that this is what worked */
+}
+
+footer {
+    text-align: center;
+}
+
+#book-data {
+    justify-items: right;
+    grid-column: 3/4;
+}
+
+#book {
+    grid-column: 1/2;
+}
+
+hr.mobile-only
+{
+    margin-top: 30px;
+}
+
+.vl {
+    border-left: 2px solid gold;
+    height: 10px;
+    visibility:hidden;
+    width: 2px;
+    grid-column: 2/3;
+}
+
+@media screen and (min-width: 800px) {
+    .mobile-only {
+        display: none;
+    }
+    .desktop-only {
+        visibility: visible;
+    }
+    h2 {
+        text-align: left;
+    }
+    #rearrangy-part {
+        grid-template-columns: 1fr 30px 2fr;
+        margin-top: 50px;
+    }
+    #book-data {
+        grid-column: 1/2;
+        margin-right: 30px;
+    }
+    #book {
+        grid-column: 3/4;
+    }
+    img {
+        width: var(--desktop-image-width);
+    }
+    .vl {
+        height: 97%;
+    }
+}
