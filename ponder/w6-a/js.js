@@ -53,3 +53,76 @@ for (let i = 0; i < 'cheese'.length; i++)
     num += 'cheese'.charCodeAt(i);
 }
 console.log(num); 
+
+console.log('array.reduce: ' + [42, 1337, 16, 28, 7, 5, 3, 187].reduce((total, item) => total + item));
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const index = fruits.indexOf("Apple");
+console.log('Index of Apple: ' + index);
+
+
+const movie = {type:"Fiat", model:"500", color:"white", title:"Cars 2", genre:"Too many", stars:"Star Star Star Star"};
+const movieSummary = `
+  <div class="movie-summary">
+    <h2>${movie.title}</h2>
+    <p>${movie.genre} - ${movie.stars}</p>
+  </div>
+`;
+
+document.body.innerHTML += movieSummary;
+
+
+
+
+function convert(grade) {
+    switch (grade){
+        case 'A':
+            points = 4;
+            break;
+        case 'B':
+            points = 3;
+            break;
+        case 'C':
+            points = 2;
+            break;
+        case 'D':
+            points = 1;
+            break;
+        case 'F':
+            points = 0;
+            break;
+        default:
+            alert('not a valid grade');
+    }
+    return points;
+}
+
+function convertAcc(total, grade) {
+    if (typeof total == 'string')
+    {
+        total = convert(total);
+    }
+    return total + convert(grade);
+}
+
+
+letterGrades = ['A', 'A', 'C', 'A', 'A', 'A', 'A', 'C', 'B'];
+numberGrades = letterGrades.map((grade) => {return convert(grade)})
+console.log('Grade total: ' + ['A', 'A', 'C', 'A', 'A', 'A', 'A', 'C', 'B'].reduce(convertAcc));
+
+// let newNameArray = names.map((name) => {
+//     return name + " Gilchrist"
+// })
+
+
+const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
+
+
+const students = [
+    {last: 'Andrus', first: 'Aaron'},
+    {last: 'Masa', first:'Manny'},
+    {last: 'Tanda', first: 'Tamanda'}];
+
+students.forEach((student) =>
+    console.log(student.first + ' ' + student.last)
+);
