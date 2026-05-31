@@ -84,7 +84,6 @@ const articles = [
                 <p>${article.description}</p>
             </div>
         </div>
-        <hr>
         `
 
         // 2. Putting that HTML on the page
