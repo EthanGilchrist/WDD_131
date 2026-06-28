@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="js.js" defer></script>
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
@@ -20,7 +21,7 @@
     <meta name="twitter:image" content="https://ethangilchrist.github.io/WDD_131/prove/characterCard/assets/RaftingLogo.png">
 
     <!-- One favicon (ICO works everywhere) -->
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <!-- One Apple Touch Icon (iOS home screen) -->
     <link rel="apple-touch-icon" href="assets/RaftingLogoTiny.png">
@@ -39,23 +40,25 @@
             <!-- couldn't get it to work :( -->
             <!-- UPDATE, IT WORKED TOO WELL -->
             <!-- <input type="search" style="background-image: url('assets/search.svg');"> -->
-            <input type="search">
-            <img src="assets/search.svg">
+            <input type="search" id="search-bar">
+            <img src="assets/search.svg" id="search-icon">
         </nav>
         <hr>
         <main>
-            <img src="assets/apple-crisp.jpg" alt="Apple crisp dish">
-            <div class="container">
-                <button>dessert</button>
-                <h2>Apple Crisp</h2>
-                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-            </div>    
+            <div class="recipe">
+                <img src="assets/apple-crisp.jpg" alt="Apple crisp dish">
+                <div class="container">
+                    <button>dessert</button>
+                    <h2>Apple Crisp</h2>
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                </div>
+            </div>
         </main>
     </body>
     <footer>
@@ -65,7 +68,7 @@
             <a href="#"><img src="assets/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="assets/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </footer>
 </body>
 </html>
